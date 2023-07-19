@@ -1,0 +1,21 @@
+
+->Sample Query:
+
+$order_query= mysqli_query($conn, "SELECT FROM 'orders WHERE user_id='$user_id') or die('query failed'); 
+if(mysqli_num_rows($order_query) > 0){
+while($fetch_orders mysqli_fetch_assoc($order_query)){
+
+
+$select_products = mysqli_query($conn, "SELECT FROM "products") or die('query failed');
+if (mysqli_num_rows($select_products) > 0) { 
+while ($fetch_products- mysqli_fetch_assoc($select_products)) {    
+$delete_id = $_GET['delete'];
+mysqli_query($conn, "DELETE FROM message` WHERE id = '$delete_id") or die('query failed');
+header("location: admin_contacts.php');
+
+Scheck_cart_numbers mysqli_query($conn, "SELECT FROM cart WHERE nane Sproduct_name' AND user_id Suser_id"") or die('query failed');
+if (mysqli_num_rows(Scheck_cart_numbers) > 0) (
+Smessage[] already added to cart!';
+else {
+mysqli_query($conn, "INSERT INTO "cart' (user_id, name, price, quantity, inage) VALUES ('Suser_id', 'Sproduct_name', 'Sproduct_price', 'Sproduct_quantity", Sproduct_in Smessage[] product added to cart!';
+}
